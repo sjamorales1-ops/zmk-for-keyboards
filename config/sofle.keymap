@@ -74,11 +74,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp GRAVE        &kp N1      &kp N2       &kp N3          &kp N4       &kp N5                                     &kp N6  &kp N7       &kp N8           &kp N9       &kp N0         &kp DELETE
-&kp ESC          &kp Q       &kp W        &kp F           &kp P        &kp B                                      &kp J   &kp L        &kp U            &kp Y        &kp SEMICOLON  &kp BACKSPACE
-&kp TAB          &HM LWIN A  &HM LCTRL R  &HM LEFT_ALT S  &HM LSHFT T  &kp G                                      &kp M   &HM RSHFT N  &HM RIGHT_ALT E  &HM RCTRL I  &HM RWIN O     &kp SQT
-&CAPS_WORD_LOCK  &kp Z       &kp X        &kp C           &kp D        &kp V       &kp C_MUTE    &rgb_ug RGB_TOG  &kp K   &kp H        &kp COMMA        &kp DOT      &kp FSLH       &CAPS_WORD_LOCK
-                             &kp LGUI     &kp LALT        &kp LCTRL    &tog LOWER  &kp RET       &kp SPACE        &mo 2   &kp RCTRL    &kp RALT         &kp RGUI
+&tog 1           &kp N1      &kp N2       &kp N3          &kp N4       &kp N5                                        &kp N6     &kp N7       &kp N8           &kp N9       &kp N0         &mo 2
+&kp ESC          &kp Q       &kp W        &kp F           &kp P        &kp B                                         &kp J      &kp L        &kp U            &kp Y        &kp SEMICOLON  &kp EQUAL
+&kp TAB          &HM LWIN A  &HM LCTRL R  &HM LEFT_ALT S  &HM LSHFT T  &kp G                                         &kp M      &HM RSHFT N  &HM RIGHT_ALT E  &HM RCTRL I  &HM RWIN O     &kp SQT
+&CAPS_WORD_LOCK  &kp Z       &kp X        &kp C           &kp D        &kp V          &kp C_MUTE    &rgb_ug RGB_TOG  &kp K      &kp H        &kp COMMA        &kp DOT      &kp FSLH       &CAPS_WORD_LOCK
+                             &kp LGUI     &kp LALT        &kp LCTRL    &kp BACKSPACE  &kp DELETE    &kp ENTER        &kp SPACE  &kp RCTRL    &kp RALT         &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
