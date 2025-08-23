@@ -74,11 +74,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp GRAVE        &kp N1      &kp N2       &kp N3          &kp N4       &kp N5                                    &kp N6    &kp N7       &kp N8           &kp N9       &kp N0         &kp DELETE
-&kp ESC          &kp Q       &kp W        &kp F           &kp P        &kp B                                     &kp J     &kp L        &kp U            &kp Y        &kp SEMICOLON  &kp BACKSPACE
-&kp TAB          &HM LWIN A  &HM LCTRL R  &HM LEFT_ALT S  &HM LSHFT T  &kp G                                     &kp M     &HM RSHFT N  &HM RIGHT_ALT E  &HM RCTRL I  &HM RWIN O     &kp SQT
-&CAPS_WORD_LOCK  &kp Z       &kp X        &kp C           &kp D        &kp V      &kp C_MUTE    &rgb_ug RGB_TOG  &kp K     &kp H        &kp COMMA        &kp DOT      &kp FSLH       &CAPS_WORD_LOCK
-                             &kp LGUI     &kp LALT        &kp LCTRL    &mo LOWER  &kp RET       &kp SPACE        &ltq 3 2  &kp RCTRL    &kp RALT         &kp RGUI
+&kp GRAVE        &kp N1      &kp N2       &kp N3          &kp N4       &kp N5                                     &kp N6  &kp N7       &kp N8           &kp N9       &kp N0         &kp DELETE
+&kp ESC          &kp Q       &kp W        &kp F           &kp P        &kp B                                      &kp J   &kp L        &kp U            &kp Y        &kp SEMICOLON  &kp BACKSPACE
+&kp TAB          &HM LWIN A  &HM LCTRL R  &HM LEFT_ALT S  &HM LSHFT T  &kp G                                      &kp M   &HM RSHFT N  &HM RIGHT_ALT E  &HM RCTRL I  &HM RWIN O     &kp SQT
+&CAPS_WORD_LOCK  &kp Z       &kp X        &kp C           &kp D        &kp V       &kp C_MUTE    &rgb_ug RGB_TOG  &kp K   &kp H        &kp COMMA        &kp DOT      &kp FSLH       &CAPS_WORD_LOCK
+                             &kp LGUI     &kp LALT        &kp LCTRL    &tog LOWER  &kp RET       &kp SPACE        &mo 2   &kp RCTRL    &kp RALT         &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -116,7 +116,7 @@
 &bt BT_CLR         &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                       &trans     &trans    &trans    &trans     &trans   &trans
 &ext_power EP_TOG  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &rgb_ug RGB_TOG                    &kp PG_UP  &trans    &kp UP    &trans     &kp N0   &trans
 &out OUT_TOG       &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &rgb_ug RGB_EFF                    &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL  &kp BSPC
-&trans             &kp RC(Z)        &kp LC(Y)        &kp RC(C)        &kp RC(V)        &trans           &trans    &trans  &trans     &trans    &trans    &trans     &trans   &trans
+&sys_reset         &kp RC(Z)        &kp LC(Y)        &kp RC(C)        &kp RC(V)        &trans           &trans    &trans  &trans     &trans    &trans    &trans     &trans   &trans
                                     &trans           &trans           &trans           &trans           &trans    &trans  &trans     &trans    &trans    &trans
             >;
 
