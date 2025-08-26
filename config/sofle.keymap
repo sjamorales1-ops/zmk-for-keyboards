@@ -31,14 +31,6 @@
 
     behaviors {
         Caps&Word Lock:
-
-        Caps_Word_Lock {
-            compatible = "zmk,behavior-caps-word";
-            label = "CAPS&WORD LOCK";
-            #binding-cells = <0>;
-            continue-list = <LSHFT RSHFT>;
-            mods = <(MOD_RSFT|MOD_LSFT)>;
-        };
     };
 
     combos {
