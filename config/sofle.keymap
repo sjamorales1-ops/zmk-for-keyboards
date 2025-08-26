@@ -36,7 +36,7 @@
     combos {
         compatible = "zmk,combos";
 
-        Caps_Lock {
+        Caps_Lockv1 {
             bindings = <&kp CLCK>;
             key-positions = <36 49>;
         };
