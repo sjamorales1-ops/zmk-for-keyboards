@@ -43,7 +43,7 @@
         compatible = "zmk,combos";
 
         CAPSLOCKV1 {
-            bindings = <&none>;
+            bindings = <&kp CAPSLOCK>;
             key-positions = <36 49>;
             layers = <0>;
         };
