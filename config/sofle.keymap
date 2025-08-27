@@ -39,6 +39,17 @@
         };
     };
 
+    behaviors {
+        mod_tap_layer: mod_tap_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOD_TAP_LAYER";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <220>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -51,14 +62,17 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp GRAVE   &kp N1      &kp N2      &kp N3       &kp N4       &kp N5                                    &kp N6     &kp N7       &kp N8       &kp N9           &kp N0         &kp DELETE
-&kp ESC     &kp Q       &kp W       &kp F        &kp P        &kp B                                     &kp J      &kp L        &kp U        &kp Y            &kp SEMICOLON  &kp BACKSPACE
-&kp TAB     &mt LWIN A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G                                     &kp M      &mt RSHFT N  &mt RCTRL E  &mt RIGHT_ALT I  &mt RWIN O     &kp SQT
-&caps_word  &kp Z       &kp X       &kp C        &kp D        &kp V      &kp C_MUTE    &rgb_ug RGB_TOG  &kp K      &kp H        &kp COMMA    &kp DOT          &kp FSLH       &caps_word
-                        &kp LGUI    &kp LALT     &kp LCTRL    &mo LOWER  &kp RET       &kp SPACE        &mo RAISE  &kp RCTRL    &kp RALT     &kp RGUI
+&kp EQUAL   &kp N1      &kp N2      &kp N3       &kp N4                  &kp N5                                        &kp N6     &kp N7                  &kp N8       &kp N9           &kp N0         &kp MINUS
+&kp ESC     &kp Q       &kp W       &kp F        &kp P                   &kp B                                         &kp J      &kp L                   &kp U        &kp Y            &kp SEMICOLON  &kp BACKSLASH
+&kp TAB     &mt LWIN A  &mt LALT R  &mt LCTRL S  &mt LSHFT T             &kp G                                         &kp M      &mt RSHFT N             &mt RCTRL E  &mt RIGHT_ALT I  &mt RWIN O     &kp SQT
+&caps_word  &kp Z       &kp X       &kp C        &kp D                   &kp V          &kp C_MUTE    &rgb_ug RGB_TOG  &kp K      &kp H                   &kp COMMA    &kp DOT          &kp FSLH       &caps_word
+                        &kp LGUI    &kp LALT     &mod_tap_layer 1 LCTRL  &kp BACKSPACE  &kp DELETE    &kp ENTER        &kp SPACE  &mod_tap_layer 2 RCTRL  &kp RALT     &kp RGUI
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
+                <&inc_dec_kp PAGE_DOWN PAGE_UP>;
+
             label = "BASE";
         };
 
