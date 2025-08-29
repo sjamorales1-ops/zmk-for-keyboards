@@ -17,6 +17,13 @@
 #define RAISE 2
 #define ADJUST 3
 
+&mt {
+    bindings = <&kp>, <&kp>;
+
+    tapping-term-ms = <220>;
+    flavor = "tap-preferred";
+};
+
 / {
     // Activate ADJUST layer by pressing raise and lower
 
