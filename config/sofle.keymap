@@ -16,6 +16,7 @@
 #define LOWER 1
 #define RAISE 2
 #define ADJUST 3
+#define TYPING 4
 
 &mt {
     bindings = <&kp>, <&kp>;
@@ -139,13 +140,37 @@
             >;
         };
 
-        extra1 { status = "reserved"; };
+ TYPING {
+            // ------------------------------------------------------------------------------------------------------------
+            // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |       |
+            // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BKSPC |
+            // |  TAB  |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
+            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | SHIFT |
+            //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
-        extra2 { status = "reserved"; };
+            bindings = <
+&kp EQUAL   &kp N1      &kp N2      &kp N3       &kp N4   &kp N5                                        &kp N6     &kp N7   &kp N8       &kp N9         &kp N0         &kp MINUS
+&kp ESC     &kp Q       &kp W       &kp F        &kp P    &kp B                                         &kp J      &kp L    &kp U        &kp Y          &kp SEMICOLON  &kp BACKSLASH
+&kp TAB     &kp A  	&kp R	    &kp S  	 &kp T	  &kp G                                         &kp M      &kp N    &kp E        &kp I  	&kp O          &kp SQT
+&caps_word  &kp Z       &kp X       &kp C        &kp D    &kp V          &trans        &trans  	        &kp K      &kp H    &kp COMMA    &kp DOT        &kp FSLH       &caps_word
+                        &trans      &trans       &trans   &trans         &trans        &trans  	        &trans     &trans   &trans       &trans
+            >;
 
-        extra3 { status = "reserved"; };
+            sensor-bindings =
+                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
+                <&inc_dec_kp PAGE_DOWN PAGE_UP>;
 
-        extra4 { status = "reserved"; };
+            label = "TYPING";
+            >;
+        };
+
+        extra1 ;
+
+        extra2 ;
+
+        extra3 ;
+
+        extra4 ;
     };
 
 };
