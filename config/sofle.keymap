@@ -13,10 +13,10 @@
 #include <dt-bindings/zmk/rgb.h>
 
 #define BASE 0
-#define LOWER 1
-#define RAISE 2
-#define ADJUST 3
-#define TYPING 4
+#define LOWER 2
+#define RAISE 3
+#define ADJUST 4
+#define TYPING 1
 
 &mt {
     bindings = <&kp>, <&kp>;
