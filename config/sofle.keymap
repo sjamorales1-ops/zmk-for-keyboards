@@ -70,11 +70,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp GRAVE   &kp N1      &kp N2      &kp N3       &kp N4       &kp N5                                 &kp N6  &kp N7       &kp N8       &kp N9           &kp N0         &kp DELETE
-&tog 1      &kp Q       &kp W       &kp F        &kp P        &kp B                                  &kp J   &kp L        &kp U        &kp Y            &kp SEMICOLON  &kp BACKSPACE
-&kp TAB     &mt LWIN A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G                                  &kp M   &mt RSHFT N  &mt RCTRL E  &mt RIGHT_ALT I  &mt RWIN O     &kp SQT
-&caps_word  &kp Z       &kp X       &kp C        &kp D        &kp V   &kp C_MUTE    &rgb_ug RGB_TOG  &kp K   &kp H        &kp COMMA    &kp DOT          &kp FSLH       &caps_word
-                        &kp LGUI    &kp LALT     &kp LCTRL    &mo 3   &kp RET       &kp SPACE        &mo 4   &kp RCTRL    &kp RALT     &kp RGUI
+&kp EQUAL   &kp N1      &kp N2      &kp N3       &kp N4                  &kp N5                                        &kp N6     &kp N7                  &kp N8       &kp N9           &kp N0         &kp MINUS
+&tog 1      &kp Q       &kp W       &kp F        &kp P                   &kp B                                         &kp J      &kp L                   &kp U        &kp Y            &kp SEMICOLON  &kp NON_US_BACKSLASH
+&kp TAB     &mt LWIN A  &mt LALT R  &mt LCTRL S  &mt LSHFT T             &kp G                                         &kp M      &mt RSHFT N             &mt RCTRL E  &mt RIGHT_ALT I  &mt RWIN O     &kp SQT
+&caps_word  &kp Z       &kp X       &kp C        &kp D                   &kp V          &kp C_MUTE    &rgb_ug RGB_TOG  &kp K      &kp H                   &kp COMMA    &kp DOT          &kp FSLH       &caps_word
+                        &kp LGUI    &kp LALT     &mod_tap_layer 2 LCTRL  &kp BACKSPACE  &kp DELETE    &kp ENTER        &kp SPACE  &mod_tap_layer 3 RCTRL  &kp RALT     &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -84,7 +84,7 @@
         TYPING {
             bindings = <
 &kp GRAVE   &kp N1      &kp N2    &kp N3    &kp N4     &kp N5                                 &kp N6  &kp N7     &kp N8     &kp N9    &kp N0         &kp DELETE
-&kp ESC     &kp Q       &kp W     &kp F     &kp P      &kp B                                  &kp J   &kp L      &kp U      &kp Y     &kp SEMICOLON  &kp BACKSPACE
+&trans      &kp Q       &kp W     &kp F     &kp P      &kp B                                  &kp J   &kp L      &kp U      &kp Y     &kp SEMICOLON  &kp BACKSPACE
 &kp TAB     &mt LWIN A  &kp R     &kp S     &kp T      &kp G                                  &kp M   &kp N      &kp E      &kp I     &kp O          &kp SQT
 &caps_word  &kp Z       &kp X     &kp C     &kp D      &kp V   &kp C_MUTE    &rgb_ug RGB_TOG  &kp K   &kp H      &kp COMMA  &kp DOT   &kp FSLH       &caps_word
                         &kp LGUI  &kp LALT  &kp LCTRL  &mo 3   &kp RET       &kp SPACE        &mo 4   &kp RCTRL  &kp RALT   &kp RGUI
