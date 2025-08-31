@@ -32,8 +32,8 @@
         compatible = "zmk,conditional-layers";
 
         adjust_layer {
-            if-layers = <LOWER RAISE>;
-            then-layer = <ADJUST>;
+            if-layers = <1 3>;
+            then-layer = <4>;
         };
     };
 
@@ -70,11 +70,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp EQUAL   &kp N1      &kp N2      &kp N3       &kp N4                  &kp N5                                        &kp N6     &kp N7                  &kp N8       &kp N9           &kp N0         &kp MINUS
-&kp ESC     &kp Q       &kp W       &kp F        &kp P                   &kp B                                         &kp J      &kp L                   &kp U        &kp Y            &kp SEMICOLON  &kp BACKSLASH
-&kp TAB     &mt LWIN A  &mt LALT R  &mt LCTRL S  &mt LSHFT T             &kp G                                         &kp M      &mt RSHFT N             &mt RCTRL E  &mt RIGHT_ALT I  &mt RWIN O     &kp SQT
-&caps_word  &kp Z       &kp X       &kp C        &kp D                   &kp V          &kp C_MUTE    &rgb_ug RGB_TOG  &kp K      &kp H                   &kp COMMA    &kp DOT          &kp FSLH       &caps_word
-                        &kp LGUI    &kp LALT     &mod_tap_layer 1 LCTRL  &kp BACKSPACE  &kp DELETE    &kp ENTER        &kp SPACE  &mod_tap_layer 2 RCTRL  &kp RALT     &kp RGUI
+&kp EQUAL     &kp N1      &kp N2      &kp N3       &kp N4                  &kp N5                                        &kp N6     &kp N7                  &kp N8       &kp N9           &kp N0         &kp MINUS
+&lt 2 ESCAPE  &kp Q       &kp W       &kp F        &kp P                   &kp B                                         &kp J      &kp L                   &kp U        &kp Y            &kp SEMICOLON  &kp BACKSLASH
+&kp TAB       &mt LWIN A  &mt LALT R  &mt LCTRL S  &mt LSHFT T             &kp G                                         &kp M      &mt RSHFT N             &mt RCTRL E  &mt RIGHT_ALT I  &mt RWIN O     &kp SQT
+&caps_word    &kp Z       &kp X       &kp C        &kp D                   &kp V          &kp C_MUTE    &rgb_ug RGB_TOG  &kp K      &kp H                   &kp COMMA    &kp DOT          &kp FSLH       &caps_word
+                          &kp LGUI    &kp LALT     &mod_tap_layer 1 LCTRL  &kp BACKSPACE  &kp DELETE    &kp ENTER        &kp SPACE  &mod_tap_layer 3 RCTRL  &kp RALT     &kp RGUI
             >;
 
             sensor-bindings =
@@ -102,6 +102,31 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+
+        TYPING {
+            // ------------------------------------------------------------------------------------------------------------
+            // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |       |
+            // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BKSPC |
+            // |  TAB  |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
+            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | SHIFT |
+            //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
+
+            bindings = <
+&kp EQUAL   &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                    &kp N6  &kp N7  &kp N8     &kp N9   &kp N0         &kp MINUS
+&trans      &kp Q   &kp W   &kp F   &kp P   &kp B                     &kp J   &kp L   &kp U      &kp Y    &kp SEMICOLON  &kp BACKSLASH
+&kp TAB     &kp A   &kp R   &kp S   &kp T   &kp G                     &kp M   &kp N   &kp E      &kp I    &kp O          &kp SQT
+&caps_word  &kp Z   &kp X   &kp C   &kp D   &kp V   &trans    &trans  &kp K   &kp H   &kp COMMA  &kp DOT  &kp FSLH       &caps_word
+                    &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans     &trans
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
+                <&inc_dec_kp PAGE_DOWN PAGE_UP>;
+
+            label = "TYPING";
+
+            >;
         };
 
         RAISE {
@@ -140,37 +165,29 @@
             >;
         };
 
- TYPING {
-            // ------------------------------------------------------------------------------------------------------------
-            // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |       |
-            // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BKSPC |
-            // |  TAB  |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-            //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
-
+        layer_5 {
             bindings = <
-&kp EQUAL   &kp N1      &kp N2      &kp N3       &kp N4   &kp N5                                        &kp N6     &kp N7   &kp N8       &kp N9         &kp N0         &kp MINUS
-&kp ESC     &kp Q       &kp W       &kp F        &kp P    &kp B                                         &kp J      &kp L    &kp U        &kp Y          &kp SEMICOLON  &kp BACKSLASH
-&kp TAB     &kp A  	&kp R	    &kp S  	 &kp T	  &kp G                                         &kp M      &kp N    &kp E        &kp I  	&kp O          &kp SQT
-&caps_word  &kp Z       &kp X       &kp C        &kp D    &kp V          &trans        &trans  	        &kp K      &kp H    &kp COMMA    &kp DOT        &kp FSLH       &caps_word
-                        &trans      &trans       &trans   &trans         &trans        &trans  	        &trans     &trans   &trans       &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
+        };
 
-            sensor-bindings =
-                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
-                <&inc_dec_kp PAGE_DOWN PAGE_UP>;
-
-            label = "TYPING";
+        layer_6 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         extra1 ;
-
         extra2 ;
-
         extra3 ;
-
         extra4 ;
     };
-
 };
