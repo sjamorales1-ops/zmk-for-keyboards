@@ -83,11 +83,11 @@
 
         TYPING {
             bindings = <
-&trans      &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                    &kp N6  &kp N7  &kp N8     &kp N9   &kp N0         &trans
-&trans      &kp Q   &kp W   &kp F   &kp P   &kp B                     &kp J   &kp L   &kp U      &kp Y    &kp SEMICOLON  &trans
-&trans      &kp A   &kp R   &kp S   &kp T   &kp G                     &kp M   &kp N   &kp E      &kp I    &kp O          &trans
-&caps_word  &kp Z   &kp X   &kp C   &kp D   &kp V   &trans    &trans  &kp K   &kp H   &kp COMMA  &kp DOT  &kp FSLH       &caps_word
-                    &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans     &trans
+&trans          &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                    &kp N6  &kp N7  &kp N8     &kp N9   &kp N0         &trans
+&trans          &kp Q   &kp W   &kp F   &kp P   &kp B                     &kp J   &kp L   &kp U      &kp Y    &kp SEMICOLON  &trans
+&trans          &kp A   &kp R   &kp S   &kp T   &kp G                     &kp M   &kp N   &kp E      &kp I    &kp O          &trans
+&kp LEFT_SHIFT  &kp Z   &kp X   &kp C   &kp D   &kp V   &trans    &trans  &kp K   &kp H   &kp COMMA  &kp DOT  &kp FSLH       &kp RSHFT
+                        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans     &trans
             >;
 
             sensor-bindings =
@@ -127,7 +127,7 @@
 &bt BT_CLR         &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                       &trans     &trans    &trans    &trans     &trans   &trans
 &ext_power EP_TOG  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &rgb_ug RGB_TOG                    &kp PG_UP  &trans    &kp UP    &trans     &kp N0   &trans
 &trans             &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &rgb_ug RGB_EFF                    &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL  &kp BSPC
-&trans             &kp RC(Z)        &kp LC(Y)        &kp RC(C)        &kp RC(V)        &trans           &trans    &trans  &trans     &trans    &trans    &trans     &trans   &trans
+&trans             &kp RC(Z)        &kp LC(Y)        &kp RC(C)        &kp RC(V)        &kp RC(X)        &trans    &trans  &trans     &trans    &trans    &trans     &trans   &trans
                                     &trans           &trans           &trans           &trans           &trans    &trans  &trans     &trans    &trans    &trans
             >;
 
